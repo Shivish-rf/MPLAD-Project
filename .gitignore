@@ -1,0 +1,17 @@
+```gitignore
+venv/
+.venv/
+
+.env
+.env.*
+
+__pycache__/
+*.py[cod]
+
+.vscode/
+.idea/
+
+*.log
+
+.ipynb_checkpoints/
+```

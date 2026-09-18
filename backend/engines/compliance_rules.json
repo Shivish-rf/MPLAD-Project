@@ -1,0 +1,50 @@
+{
+  "rules": [
+    {
+      "id": "COMP001",
+      "name": "Completed work without expenditure",
+      "field": "expenditure_record_count",
+      "condition": "completed_and_zero_expenditure",
+      "points": 30,
+      "severity": "HIGH",
+      "reason": "Work is marked completed but no expenditure record is available."
+    },
+    {
+      "id": "COMP002",
+      "name": "Amount exceeds recommended amount",
+      "field": "total_expenditure",
+      "condition": "expenditure_greater_than_recommended",
+      "points": 30,
+      "severity": "HIGH",
+      "reason": "Total expenditure exceeds the recommended amount."
+    },
+    {
+      "id": "COMP003",
+      "name": "Long approval delay",
+      "field": "approval_delay_days",
+      "condition": "greater_than_30",
+      "threshold": 30,
+      "points": 15,
+      "severity": "MEDIUM",
+      "reason": "Approval took more than 30 days."
+    },
+    {
+      "id": "COMP004",
+      "name": "Work not sanctioned",
+      "field": "is_sanctioned",
+      "condition": "equals_false",
+      "points": 25,
+      "severity": "HIGH",
+      "reason": "Recommended work does not have a corresponding sanction record."
+    },
+    {
+      "id": "COMP005",
+      "name": "Work not completed",
+      "field": "is_completed",
+      "condition": "equals_false",
+      "points": 10,
+      "severity": "MEDIUM",
+      "reason": "Work does not have a completion record."
+    }
+  ]
+}
